@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Verdana", "Arial", "Calibri";
+    background: #eeeeee;
+}
+
+input, .button, select{
+    margin: 2px 5px;
+    border: thin solid gray;
+    border-radius: 2px;
+    background: #dddddd;
+    text-decoration: none;
+    font-family: "Arial";
+    font-size: 0.9em;
+    color: black;
+    height: 40px;
+    display: inline-block;
+    padding: 4px 10px;
+    vertical-align: middle;
+    min-width: 80px;
+}
+
+.button {
+    height: 38px;
+    padding: 0;
+    line-height: 2.6;
+}
+
+input:focus {
+    border: thin solid gray;
+    box-shadow: 0px 0px 5px #87CEFA inset;
+}
+
+input[type="text"], input[type="password"]{
+    height: 30px;
+    width: 200px;
+    padding: 4px 10px;
+    margin: 2px 5px;
+}
+
+.needed {
+    border: thin solid gray;
+    box-shadow: 0px 0px 5px red inset;
+}
+
+.center {
+    display: inline-block;
+    background: #CB8181;
+    border: solid thin gray;
+    border-radius: 3px;
+    position: relative;
+    top: 100px;
+    padding: 50px 30px;
+    text-align: center;
+    width: 20%;
+    min-height: 150px;
+    min-width: 30%;
+    max-width: 45%;
+    overflow: hidden;
+    vertical-align: middle;
+    border: thick solid #722828;
+}
+
+.container {
+    width: 100%;
+    display: block;
+    text-align: center;
+    vertical-align: center;
+}
+
+select {
+    margin: 2px 5px;
+    height: 40px;
+    width: 100px;
+    text-overflow: ellipsis;
+}
+
+#scores {
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 3px;
+    overflow-y: auto;
+    text-align: center;
+}
+
+#scores td, #scores th {
+    border: thin solid #464646;
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    height: 30px;
+    text-overflow: ellipsis;
+}
+
+#scores tr {
+    margin: 0;
+    padding: 0;
+}
+
+#popup {
+    height: 400px;
+    width: 600px;
+    position: fixed;
+    display: inline-block;
+    text-align: center;
+    padding: 40px 10px;
+    background: rgba(100, 100, 100, 0.8);
+    border-radius: 5px;
+}
+
+#overlay {
+    display: inline-block;
+    position:absolute;
+    top:0px;
+    left:0px;
+    font-size:0px;
+    opacity:0.5;
+    box-shadow: 0px 0px 10px 10px red;
+}
+
+#overlay div{
+    display:inline-block;
+    background-color:white;
+    opacity:1;
+    width:100%;
+    height:100%;
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+}
+
+#timer {
+    color: white;
+    text-shadow: 2px 2px #000000;
+    font-family: "Verdana";
+    font-size: 40px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: rgba(170, 170, 170, 0.4);
+    border-radius: 3px;
+    padding: 2px 5px;
+}
+
+#playSection, #mazeManage {
+    display: inline-block;
+    background: #CB8181;
+    min-width: 20%;
+    width: 25%;
+    min-height: 200px;
+    margin: 100px 20px;
+    padding: 40px;
+    border-radius: 2px;
+    vertical-align: middle;
+    border: thick solid #722828;
+}
+
+#header{
+    display:block;
+    width: 100%;
+    border-bottom: thick solid #904848;
+    text-align: center;
+    background: #dddddd;
+    height: 50px;
+}
+
+#header p, #header a{
+    display:inline-block;
+    margin: 0 20px;
+    padding: 0px;
+    vertical-align: middle;
+}
+
+#header p{
+    text-decoration: bold;
+}
+
+#error, #success {
+    font-size: 1.2em;
+    text-decoration: bold;
+}

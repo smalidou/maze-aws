@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Map creator</title>
+        <link rel="stylesheet" href="/style/grid.css" type="text/css" />
+    </head>
+
+    <body>
+        <div id="container" oncontextmenu="return false;">
+            <input type="button" value="Back" id="back"/>
+            <br>
+            <br>
+            <span id="error" style="display:none">This name already exists</span>
+            <input type="text" placeholder="Name of the Maze" id="mazename"/>
+            <input type="number" max="30" min="7" value="7" id="columns"/>
+            <input type="number" max="30" min="7" value="7" id="rows"/>
+            <input type="button" value="Load" id="load"/>
+            <input type="button" value="Save" id="save" hidden/>
+
+            <br>
+            <br>
+
+            <div id="types" style="display:none">
+                <input type="radio" name="type" value="wall" id="wall" onclick="onRadioChange(this);" checked/>Wall (W)
+                <input type="radio" name="type" value="empty" id="empty" onclick="onRadioChange(this);"/>Empty (X, Right click)
+                <input type="radio" name="type" value="start" id="start" onclick="onRadioChange(this);"/>Start (S)
+                <input type="radio" name="type" value="exit" id="exit" onclick="onRadioChange(this);"/>Exit (Q)
+            </div>
+
+            <br>
+            <br>
+
+            <div id="grid"></div>
+        </div>
+        <script src="/scripts/grid.js"></script>
+        <script src="/scripts/creator.js"></script>
+    </body>
+</html>

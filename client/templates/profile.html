@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Profile</title>
+        <link rel="stylesheet" href="/style/main.css" type="text/css" />
+    </head>
+
+    <body>
+        <div id="header">
+            <p>My account - {% if name %}{{ name }}{% else %}{{ user }}{% endif %}</p>
+            <a href="/signout">Sign out</a>
+        </div>
+        <div class="container">
+
+            <div id="playSection">
+                <h2>Play</h2>
+                <br>
+                <div id="allMazes"></div>
+                <div id="availableUsers">
+                </div>
+            </div>
+
+            <div id="mazeManage">
+                <h2>My mazes</h2>
+                <br>
+                <div id="myMazes"></div>
+                <br>
+                <a class="button" href="/create-maze">Create</a>
+            </div>
+
+        </div>
+    </body>
+    <script type="text/javascript" src="/scripts/profile.js"></script>
+</html>

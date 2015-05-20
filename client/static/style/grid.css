@@ -1,0 +1,81 @@
+body {
+    background: #eeeeee;
+    margin: 0;
+    -moz-user-select: none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -o-user-select: none; 
+}
+
+#container {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border: thick solid #722828;
+    border-radius: 4px;
+}
+
+#tableGrid {
+    display: inline-block;
+    max-width: 1000px;
+}
+
+#tableGrid table {
+    width: 100%;
+    border-collapse: collapse;
+    border: thick solid #904848;
+}
+
+.cell {
+    border: thin dashed #464646;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+#grid tr {
+    margin: 0;
+    padding: 0;
+}
+
+.cell:hover {
+    box-shadow: inset 0 0 0 1000px rgba(90,90,255,0.2);
+}
+
+.wall {
+    background: url('/images/wall.png') repeat;
+    background-size: cover;
+}
+
+.exit {
+    background: url('/images/exit.png') repeat;
+    background-size: cover;
+}
+
+.start {
+    background: url('/images/start.png') repeat;
+    background-size: cover;
+}
+
+.cross {
+    background: url('/images/cross.png') repeat;
+    background-size: cover;
+}
+
+#layer {
+    pointer-events: none;
+    opacity: 0.5;
+    width: 20px;
+    height: 20px;
+}
+
+#error {
+    background-color: rgba(255, 100, 100, 0.7);
+    border: solid thin rgb(200, 50, 50);
+    border-radius: 3px;
+    position: absolute;
+    padding: 1px 5px;
+    top: 100px;
+    display: none;
+}

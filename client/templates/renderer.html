@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{% if error %}Error{% elseif success %}Success{% endif %}</title>
+        <link rel="stylesheet" href="/style/main.css" type="text/css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="center">
+                {% if error is defined %}
+                    <div id="error">
+                        {% if error == "CONNECTED" %}
+                            You are already connected.<br>
+                            Redirection in <span id="timerText"></span>, please wait.
+                            <script type="text/javascript" src="/scripts/timer.js"></script>
+
+                        {% elseif error == "NOT_CONNECTED" %}
+                            You have to be logged in to access this page<br>
+                            Please <a href="/signin">click here</a> to sign in.
+
+                        {% elseif error == "QUERY_ERROR" %}
+                            An error occurred while executing the query.<br>
+                            {{which}}
+                            {% if which == "MAZE_NAME_ALREADY_EXISTS" %}
+                            The name of the maze already exists, please choose another name.<br>
+                            {% endif%}
+                            <a href="/">Click here</a> to go to the home page.
+
+                        {% elseif error == "NOT_FOUND" %}
+                            Error 404: Page not found.
+                            <a href="/">Click here</a> to go to the home page.
+
+                        {% elseif error == "EMPTY_FIELDS" %}
+                            There is missing informations in your request, please try again<br>
+                            <a href="/">Click here</a> to go to the home page.
+
+                        {% elseif error == "EMPTY_CASE" %}
+                            There is no start or exit in your maze<br>
+                            <a href="/">Click here</a> to go to the home page.
+
+                        {% elseif error == "CONNECTION_FAILURE" %}
+                            The connection with your opponent has been lost.<br>
+                            Redirection in <span id="timerText"></span>.
+                            <script type="text/javascript" src="/scripts/timer.js"></script>
+
+                        {% endif %}
+                    </div>
+                {% elseif success is defined %}
+                    <div id="success">
+                        {% if success == "MAZE_CREATED" %}
+                            The maze was successfully created.<br>
+
+                        {% elseif success == "MAZE_UPDATED" %}
+                            The maze was successfully updated.<br>
+
+                        {% elseif success == "MAZE_REMOVED" %}
+                            The maze was successfully removed.<br>
+
+                        {% endif %}
+                        Redirection in <span id="timerText"></span>.
+                        <script type="text/javascript" src="/scripts/timer.js"></script>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </body>
+</html>
